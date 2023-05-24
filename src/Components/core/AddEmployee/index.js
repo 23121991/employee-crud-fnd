@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './addEmployee.css';
+import axios from "axios";
 
 const AddEmployee = () => {
     const { employeeDetails, setEmployeeDetails } = useState({
@@ -18,7 +19,15 @@ const AddEmployee = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const employee = {...employeeDetails,..value}
+        const employee = {...employeeDetails};
+
+
+        try{
+            const response = axios.post(``)
+
+        }catch(error){
+console.log("Error: ",error)
+        }
     }
 
     return (

@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './updateEmployee.css';
 
 const updateEmployee = () => {
+  const {employeeDetails,setEmployeeDetails} = useState({
+    name:"",
+    email:"",
+    address:"",
+    designation:"",
+    mobileNumber:"",
+    bloodgroup:""
+  })
   return (
     <div className='updateEmployee'>
       <h1>UPDATE EMPLOYEE</h1>
