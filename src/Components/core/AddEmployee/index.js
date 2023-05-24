@@ -23,7 +23,7 @@ const AddEmployee = () => {
 
 
         try{
-            const response = axios.post(``)
+            const response = axios.post(`${process.env.REACT_APP_URL}/employees`)
 
         }catch(error){
 console.log("Error: ",error)
