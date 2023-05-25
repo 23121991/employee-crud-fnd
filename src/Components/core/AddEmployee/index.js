@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import './addEmployee.css';
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 const AddEmployee = () => {
-    const { employeeDetails, setEmployeeDetails } = useState({
+    const navigate = useNavigate();
+    const [ employeeDetails, setEmployeeDetails ] = useState({
         name: "",
         email: "",
         address: "",
@@ -12,21 +14,28 @@ const AddEmployee = () => {
         bloodgroup: ""
     })
     const handleInput = (value) => {
-        return setEmployeeDetails = (employee => {
+        return setEmployeeDetails(employee => {
             return { ...employee, ...value }
         })
     }
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        const employee = {...employeeDetails};
-
-
-        try{
-            const response = axios.post(`${process.env.REACT_APP_URL}/employees`)
-
-        }catch(error){
-console.log("Error: ",error)
+        try {
+            const response = await axios.post(`${process.env.REACT_APP_URL}/employees`, employeeDetails);
+            if (response) {
+                setEmployeeDetails({
+                    name: "",
+                    email: "",
+                    address: "",
+                    designation: "",
+                    mobileNumber: "",
+                    bloodgroup: ""
+                })
+                navigate('/');
+            }
+        } catch (error) {
+            console.log("Error: ", error)
         }
     }
 
