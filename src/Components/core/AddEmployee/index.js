@@ -44,7 +44,7 @@ const AddEmployee = () => {
 
     return (
         <div className="addEmployee">
-            <h2>Add an Employee</h2>
+            <h2 className='header'>Add an Employee</h2>
             <form onSubmit={handleSubmit}> 
                 <div className="form-group">
                     <label htmlFor="name">Name</label>

@@ -1,0 +1,23 @@
+.employee-list{
+   background:  linear-gradient(45deg, rgb(228, 167, 167) 0 20%, rgb(36, 136, 138) 50% ,rgb(233, 233, 114));
+}
+.list-head{
+ display:flex;
+ align-items: center;
+ justify-content: center;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-weight: 800;
+ background-color:beige;
+ color: rgb(165, 42, 42);
+}
+.table-head{
+    font-weight: 900;
+    font-size: larger;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: blueviolet;
+}
+.table-body{
+    font-size: medium;
+    font-weight: 400;
+    color: rgb(35, 30, 23)
+}

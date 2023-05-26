@@ -1,4 +1,16 @@
 .addEmployee{
     width:60%;
     margin:0 auto;
+    background-color: rgb(177, 176, 174);
+}
+.header{
+    font-size: large;
+    text-decoration: underline;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(157, 69, 17);
+}
+.form-group{
+    margin: 5px;
+    padding: 5px;
 }

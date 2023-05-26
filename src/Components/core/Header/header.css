@@ -1,0 +1,16 @@
+.navbar{
+ display: flex;
+ align-items: center;
+ background-color: rgb(245, 243, 243);
+}
+.navbar-brand{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: rgb(0, 108, 74);
+}
+.nav-link{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 300;
+    color: rgb(0, 108, 74);
+    text-decoration:underline ;
+}
