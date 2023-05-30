@@ -8,7 +8,7 @@ const EmployeeList = () => {
 
     useEffect(() => {
         getEmployees();
-    },[]);
+    }, []);
 
     const getEmployees = async () => {
         try {
@@ -43,7 +43,6 @@ const EmployeeList = () => {
                         <th>Designation</th>
                         <th>Mobile Number</th>
                         <th>Blood Group</th>
-                        <th>Options</th>
                     </tr>
                 </thead>
                 <tbody>

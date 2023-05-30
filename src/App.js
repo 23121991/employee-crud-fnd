@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<EmployeeList />} />
           <Route path="/employee/add" element={<AddEmployee />} />
-          <Route path="/employee/:empID/update" element={<UpdateEmployee />} />
+          <Route path='/employee/:empID/update' element={<UpdateEmployee />} />
         </Routes>
         <Footer />
       </div>
