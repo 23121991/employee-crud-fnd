@@ -8,24 +8,24 @@ const EmployeeList = () => {
 
     useEffect(() => {
         getEmployees();
-    }, []);
+    },[]);
 
     const getEmployees = async () => {
-        try{
+        try {
             const response = await axios.get(`${process.env.REACT_APP_URL}/employees`);
             setEmployees(response.data);
-        }catch(error){
+        } catch (error) {
             console.log('Error: ', error);
         }
     }
 
     const handleDelete = async (employeeID) => {
-        try{
+        try {
             const response = await axios.delete(`${process.env.REACT_APP_URL}/employees/${employeeID}`);
-            if(response){
+            if (response) {
                 getEmployees();
             }
-        }catch(error){
+        } catch (error) {
             console.log(error);
         }
     }
@@ -37,27 +37,26 @@ const EmployeeList = () => {
             <table className="table table-striped">
                 <thead>
                     <tr>
-                        <th className="table-head">Name</th>
-                        <th className="table-head">Email</th>
-                        <th className="table-head">Address</th>
-                        <th className="table-head">Designation</th>
-                        <th className="table-head">Mobile Number</th>
-                        <th className="table-head">Blood Group</th>
-                        <th className="table-head">Options</th>
-
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Designation</th>
+                        <th>Mobile Number</th>
+                        <th>Blood Group</th>
+                        <th>Options</th>
                     </tr>
                 </thead>
                 <tbody>
                     {employees.length && employees.map((employee, index) => (
                         <tr key={index}>
-                            <td className="table-body">{employee.name}</td>
-                            <td className="table-body">{employee.email}</td>
-                            <td className="table-body">{employee.address}</td>
-                            <td className="table-body">{employee.designation}</td>
-                            <td className="table-body">{employee.mobileNumber}</td>
-                            <td className="table-body">{employee.bloodGroup}</td>
+                            <td>{employee.name}</td>
+                            <td>{employee.email}</td>
+                            <td>{employee.address}</td>
+                            <td>{employee.designation}</td>
+                            <td>{employee.mobileNumber}</td>
+                            <td>{employee.bloodGroup}</td>
                             <td>
-                                <Link  className="btn btn-link"  to={`/employees/${employee._id}/update`}>Edit</Link>
+                                <Link className="btn btn-link" to={`/employees/${employee._id}/update`}>Edit</Link>
                                 <button className="btn btn-link" onClick={() => handleDelete(employee._id)}>Delete</button>
                             </td>
                         </tr>

@@ -25,7 +25,7 @@ const AddEmployee = () => {
 
         console.log('Submitting employee details...')
         try{
-            const response = await axios.post(`${process.env.REACT_APP_URL}/employees`, employeeDetails);
+            const response = await axios.post(`${process.env.REACT_APP_URL}/employees`,employeeDetails);
             if(response){
                 setEmployeeDetails({
                     name: '',

@@ -10,7 +10,6 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
             <NavLink className="nav-link active" to="/employee/add">CreateEmployee</NavLink>
-
           </div>
         </div>
       </div>

@@ -37,7 +37,7 @@ const UpdateEmployee = () => {
 
         console.log('Updating employee details...')
         try{
-            const response = await axios.put(`${process.env.REACT_APP_URL}/employees/${empID}`, employeeDetails);
+            const response = await axios.put(`${process.env.REACT_APP_URL}/employees/${empID}`,employeeDetails);
             if(response){
                 setEmployeeDetails({
                     name: '',
