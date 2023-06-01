@@ -43,10 +43,11 @@ const EmployeeList = () => {
                         <th>Designation</th>
                         <th>Mobile Number</th>
                         <th>Blood Group</th>
+
                     </tr>
                 </thead>
                 <tbody>
-                    {employees.length && employees.map((employee, index) => (
+                    {employees && employees.map((employee, index) => (
                         <tr key={index}>
                             <td>{employee.name}</td>
                             <td>{employee.email}</td>
@@ -55,7 +56,7 @@ const EmployeeList = () => {
                             <td>{employee.mobileNumber}</td>
                             <td>{employee.bloodGroup}</td>
                             <td>
-                                <Link className="btn btn-link" to={`/employees/${employee._id}/update`}>Edit</Link>
+                                <Link className="btn btn-link" to={`/employees/${employee._id}`}>Edit</Link>
                                 <button className="btn btn-link" onClick={() => handleDelete(employee._id)}>Delete</button>
                             </td>
                         </tr>
