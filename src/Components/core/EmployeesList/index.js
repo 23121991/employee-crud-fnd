@@ -56,7 +56,7 @@ const EmployeeList = () => {
                             <td>{employee.mobileNumber}</td>
                             <td>{employee.bloodGroup}</td>
                             <td>
-                                <Link className="btn btn-link" to={`/employees/${employee._id}`}>Edit</Link>
+                                <Link className="btn btn-link" to={`/employees/${employee._id}/update`}>Edit</Link>
                                 <button className="btn btn-link" onClick={() => handleDelete(employee._id)}>Delete</button>
                             </td>
                         </tr>
